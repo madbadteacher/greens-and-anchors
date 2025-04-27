@@ -4,35 +4,86 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Guest Feedback | Greens and Anchors</title>
-  <link rel="stylesheet" href="assets/css/styles.css"/>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <style>
+    header {
+      background-color: rgba(0,0,0,0.6);
+      text-align: center;
+      padding: 20px;
+    }
+    header h1 {
+      color: white;
+      margin: 0;
+      font-size: 2em;
+    }
+    nav {
+      margin-top: 10px;
+    }
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+    main {
+      background-color: rgba(0,0,0,0.7);
+      padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .feedback-card {
+      background-color: rgba(255,255,255,0.9);
+      color: #333;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.2);
+    }
+    footer {
+      background-color: rgba(0,0,0,0.85);
+      text-align: center;
+      padding: 20px;
+      margin-top: 30px;
+    }
+    .airbnb-cta {
+      background-color: #ff5a5f;
+      color: white;
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: 5px;
+      display: inline-block;
+      margin: 10px 0;
+    }
+  </style>
 </head>
-<body class="feedback-page">
-  <header>
-    <h1>What Our Guests Say</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="feedback.html">Testimonials</a>
-      <a href="golf.html">Golf</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+<body>
 
-  <main class="feedback-container">
-    <section class="feedback-card"><p>"An unforgettable stay! Everything was perfect — we can’t wait to return!"</p></section>
-    <section class="feedback-card"><p>"A hidden gem. Ideal location and beautifully decorated. Host was so welcoming."</p></section>
-    <section class="feedback-card"><p>"Exceptional hospitality and a truly stunning property. Highly recommended."</p></section>
-    <section class="feedback-card"><p>"Perfect weekend retreat. The ambiance and location were spot on."</p></section>
-    <section class="feedback-card"><p>"It felt like a home away from home. Everything was so thoughtfully done."</p></section>
-    <section class="feedback-card"><p>"Stylish and comfortable. The photos don’t even do it justice!"</p></section>
-    <section class="feedback-card"><p>"Absolutely spotless. Loved the calm colours and modern design."</p></section>
-    <section class="feedback-card"><p>"Woke up to birdsong and sea air — heavenly!"</p></section>
-    <section class="feedback-card"><p>"Great communication and check-in. Everything was smooth and easy."</p></section>
-    <section class="feedback-card"><p>"We’ll be telling all our friends. A top-tier Airbnb experience."</p></section>
-  </main>
+<header>
+  <h1>What Our Guests Say</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="feedback.html">Testimonials</a>
+    <a href="golf.html">Golf</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
 
-  <footer>
-    <a class="airbnb-cta" href="https://www.airbnb.com/l/ftRNnl8B" target="_blank">Book Now on Airbnb</a>
-    <p>&copy; 2025 Greens and Anchors</p>
-  </footer>
+<main>
+  <div class="feedback-card"><p>"An unforgettable stay! Everything was perfect — we can’t wait to return!"</p></div>
+  <div class="feedback-card"><p>"A hidden gem. Ideal location and beautifully decorated. Host was so welcoming."</p></div>
+  <div class="feedback-card"><p>"Exceptional hospitality and a truly stunning property. Highly recommended."</p></div>
+  <div class="feedback-card"><p>"Perfect weekend retreat. The ambiance and location were spot on."</p></div>
+  <div class="feedback-card"><p>"It felt like a home away from home. Everything was so thoughtfully done."</p></div>
+  <div class="feedback-card"><p>"Stylish and comfortable. The photos don’t even do it justice!"</p></div>
+  <div class="feedback-card"><p>"Absolutely spotless. Loved the calm colours and modern design."</p></div>
+  <div class="feedback-card"><p>"Woke up to birdsong and sea air — heavenly!"</p></div>
+  <div class="feedback-card"><p>"Great communication and check-in. Everything was smooth and easy."</p></div>
+  <div class="feedback-card"><p>"We’ll be telling all our friends. A top-tier Airbnb experience."</p></div>
+</main>
+
+<footer>
+  <a class="airbnb-cta" href="https://www.airbnb.com/l/ftRNnl8B" target="_blank">Book Now on Airbnb</a>
+  <p>&copy; 2025 Greens and Anchors</p>
+</footer>
+
 </body>
 </html>
