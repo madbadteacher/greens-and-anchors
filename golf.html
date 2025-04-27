@@ -24,7 +24,6 @@
       margin: 0 10px;
       text-decoration: none;
       font-weight: bold;
-      transition: color 0.3s ease;
     }
     nav a:hover {
       color: #ff5a5f;
@@ -32,6 +31,14 @@
     main {
       padding: 30px;
       text-align: center;
+    }
+    h2 {
+      color: #ff5a5f;
+    }
+    .subheading {
+      color: #ff5a5f;
+      margin-bottom: 30px;
+      font-size: 1.2em;
     }
     table {
       width: 100%;
@@ -78,40 +85,6 @@
     .discover-rory-btn:hover {
       background-color: #228B22;
     }
-    /* Modal */
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 100;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      overflow: auto;
-      background-color: rgba(0,0,0,0.5);
-    }
-    .modal-content {
-      background-color: #fff;
-      margin: 10% auto;
-      padding: 30px;
-      border: 1px solid #888;
-      width: 80%;
-      max-width: 600px;
-      border-radius: 10px;
-      text-align: left;
-    }
-    .close {
-      color: #aaa;
-      float: right;
-      font-size: 28px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-    .close:hover,
-    .close:focus {
-      color: black;
-      text-decoration: none;
-    }
     footer {
       background-color: rgba(255,255,255,0.95);
       text-align: center;
@@ -144,13 +117,14 @@
     <a href="index.html">Home</a>
     <a href="feedback.html">Testimonials</a>
     <a href="golf.html">Golf</a>
+    <a href="discover-rory.html">Discover Rory</a>
     <a href="contact.html">Contact</a>
   </nav>
 </header>
 
 <main>
   <h2>Local Golf Courses</h2>
-  <p>Discover some of the finest golf experiences just a short drive away.</p>
+  <p class="subheading">Discover some of the finest golf experiences just a short drive away.</p>
 
   <table>
     <thead>
@@ -176,16 +150,14 @@
       <tr><td>20.0</td><td>Royal County Down Golf Club</td><td><a class="more-info" href="https://www.royalcountydown.org/" target="_blank">Website · +44 28 4372 3314</a></td></tr>
     </tbody>
   </table>
-</main>
 
-<div id="roryModal" class="modal">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal()">&times;</span>
+<div id="roryModal" class="modal" style="display:none; position:fixed; z-index:100; left:0; top:0; width:100%; height:100%; overflow:auto; background-color:rgba(0,0,0,0.5);">
+  <div style="background:white; margin:10% auto; padding:30px; width:80%; max-width:600px; border-radius:10px; text-align:left;">
+    <span style="float:right; font-size:28px; cursor:pointer;" onclick="closeModal()">&times;</span>
     <h2>Discover Rory McIlroy</h2>
     <p><strong>Holywood Golf Club</strong> is famously the home course where Rory McIlroy honed his legendary skills. Rory began his journey here before rising to become one of the greatest golfers in the world.</p>
-    <p><strong>Recent Achievements:</strong></p>
     <ul>
-      <li>🏆 2025 Masters Champion - Completed his career Grand Slam!</li>
+      <li>🏆 2025 Masters Champion (Completed Career Grand Slam)</li>
       <li>🏆 2025 Players Championship Winner</li>
       <li>🏆 2025 AT&T Pebble Beach Pro-Am Winner</li>
     </ul>
@@ -194,13 +166,15 @@
 </div>
 
 <script>
-function openModal() {{
-  document.getElementById("roryModal").style.display = "block";
-}}
-function closeModal() {{
-  document.getElementById("roryModal").style.display = "none";
-}}
+function openModal() {
+  document.getElementById('roryModal').style.display = 'block';
+}
+function closeModal() {
+  document.getElementById('roryModal').style.display = 'none';
+}
 </script>
+
+</main>
 
 <footer>
   <a class="airbnb-cta" href="https://www.airbnb.com/l/ftRNnl8B" target="_blank">Book Now on Airbnb</a>
