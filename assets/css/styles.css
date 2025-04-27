@@ -43,8 +43,20 @@ h1, h2 {
   background-color: #e0484c;
 }
 
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .gallery img {
   width: 100%;
   max-width: 400px;
   margin: 10px;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.03);
 }
