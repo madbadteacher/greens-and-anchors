@@ -1,0 +1,61 @@
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  background: url('../images/363fd63f-11a8-4a1d-be8b-774f29f0f317.jpeg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+header {
+  background-color: rgba(0,0,0,0.6);
+  padding: 20px;
+  text-align: center;
+}
+
+nav a {
+  color: #fff;
+  margin: 0 15px;
+  text-decoration: none;
+}
+
+main {
+  background-color: rgba(0,0,0,0.7); /* Darker overlay */
+  padding: 20px;
+  text-align: center;
+}
+
+.intro p {
+  font-size: 1.3em;
+  margin-bottom: 20px;
+}
+
+.airbnb-cta {
+  background-color: #ff5a5f;
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+  margin: 10px 0;
+}
+
+.gallery {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+footer {
+  background-color: rgba(0,0,0,0.85); /* Solid footer */
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+}
