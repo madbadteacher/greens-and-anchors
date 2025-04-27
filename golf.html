@@ -64,6 +64,54 @@
     a.more-info:hover {
       text-decoration: underline;
     }
+    .discover-rory-btn {
+      background-color: #006400;
+      color: white;
+      padding: 6px 12px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 0.9em;
+      margin-left: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .discover-rory-btn:hover {
+      background-color: #228B22;
+    }
+    /* Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 100;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.5);
+    }
+    .modal-content {
+      background-color: #fff;
+      margin: 10% auto;
+      padding: 30px;
+      border: 1px solid #888;
+      width: 80%;
+      max-width: 600px;
+      border-radius: 10px;
+      text-align: left;
+    }
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+    }
     footer {
       background-color: rgba(255,255,255,0.95);
       text-align: center;
@@ -120,7 +168,7 @@
       <tr><td>4.5</td><td>Carnalea Golf Club</td><td><a class="more-info" href="https://carnaleagolfclub.co.uk/" target="_blank">Website · 028 9127 0368</a></td></tr>
       <tr><td>5.0</td><td>Clandeboye Golf Club</td><td><a class="more-info" href="https://www.cgc-ni.com/" target="_blank">Website · +44 28 9127 1767</a></td></tr>
       <tr><td>6.0</td><td>Scrabo Golf Club</td><td><a class="more-info" href="https://www.scrabogolfclubni.com/" target="_blank">Website · 028 9181 2355</a></td></tr>
-      <tr><td>7.0</td><td>Holywood Golf Club</td><td><a class="more-info" href="https://holywoodgolfclub.co.uk/" target="_blank">Website · +44 28 9042 3135</a></td></tr>
+      <tr><td>7.0</td><td>Holywood Golf Club</td><td><a class="more-info" href="https://holywoodgolfclub.co.uk/" target="_blank">Website · +44 28 9042 3135</a><button class="discover-rory-btn" onclick="openModal()">Discover Rory</button></td></tr>
       <tr><td>7.5</td><td>Helen's Bay Golf Club</td><td><a class="more-info" href="https://www.helensbaygc.com/" target="_blank">Website · 028 9185 2815</a></td></tr>
       <tr><td>8.0</td><td>Donaghadee Golf Club</td><td><a class="more-info" href="https://www.donaghadeegolfclub.com/" target="_blank">Website · 028 9188 3624</a></td></tr>
       <tr><td>12.0</td><td>Kirkistown Castle Golf Club</td><td><a class="more-info" href="https://kcgc.golf/" target="_blank">Website · 028 4277 1233</a></td></tr>
@@ -129,6 +177,30 @@
     </tbody>
   </table>
 </main>
+
+<div id="roryModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h2>Discover Rory McIlroy</h2>
+    <p><strong>Holywood Golf Club</strong> is famously the home course where Rory McIlroy honed his legendary skills. Rory began his journey here before rising to become one of the greatest golfers in the world.</p>
+    <p><strong>Recent Achievements:</strong></p>
+    <ul>
+      <li>🏆 2025 Masters Champion - Completed his career Grand Slam!</li>
+      <li>🏆 2025 Players Championship Winner</li>
+      <li>🏆 2025 AT&T Pebble Beach Pro-Am Winner</li>
+    </ul>
+    <p>Experience the magic of Rory’s beginnings right here at Holywood Golf Club.</p>
+  </div>
+</div>
+
+<script>
+function openModal() {{
+  document.getElementById("roryModal").style.display = "block";
+}}
+function closeModal() {{
+  document.getElementById("roryModal").style.display = "none";
+}}
+</script>
 
 <footer>
   <a class="airbnb-cta" href="https://www.airbnb.com/l/ftRNnl8B" target="_blank">Book Now on Airbnb</a>
