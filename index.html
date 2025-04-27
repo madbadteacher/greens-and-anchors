@@ -6,56 +6,64 @@
   <title>Greens and Anchors | Coastal Getaway</title>
   <link rel="stylesheet" href="assets/css/styles.css">
   <style>
+    html {
+      scroll-behavior: smooth; /* Smooth scrolling globally */
+    }
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      color: #fff;
-      background: url('assets/images/363fd63f-11a8-4a1d-be8b-774f29f0f317.jpeg') no-repeat center center fixed;
-      background-size: cover;
+      color: #333;
+      background: #f9f9f9;
     }
     header {
-      background-color: rgba(0,0,0,0.6);
+      background-color: rgba(255,255,255,0.95);
       text-align: center;
       padding: 20px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      transition: background 0.5s ease;
     }
     nav a {
-      color: #fff;
+      color: #333;
       margin: 0 10px;
       text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #ff5a5f;
     }
     main {
       position: relative;
       padding: 20px;
-      background-color: rgba(0,0,0,0.6);
+      background-color: #f9f9f9;
       text-align: center;
-      overflow: hidden;
-    }
-    main::before {
-      content: "";
-      background: url('assets/images/logo.png') no-repeat center center;
-      background-size: 300px;
-      opacity: 0.04;
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      z-index: 0;
-    }
-    main > * {
-      position: relative;
-      z-index: 1;
     }
     .gallery {
       margin-top: 30px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
     }
     .gallery img {
+      display: block;
       width: 100%;
+      height: auto;
+      max-width: 1200px;
       border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      opacity: 0;
+      transform: translateY(20px) scale(1);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+    .gallery img.visible {
+      opacity: 1;
+      transform: translateY(0) scale(1.02);
+    }
+    .gallery img.zoom:hover {
+      transform: scale(1.04);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
     }
     .airbnb-cta {
       background-color: #ff5a5f;
@@ -65,14 +73,48 @@
       border-radius: 5px;
       display: inline-block;
       margin: 10px 0;
+      transition: all 0.3s ease;
+    }
+    .airbnb-cta:hover {
+      background-color: #e0484c;
+      transform: scale(1.05);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     }
     footer {
-      background-color: rgba(0,0,0,0.85);
+      background-color: rgba(255,255,255,0.95);
       text-align: center;
       padding: 20px;
       margin-top: 30px;
+      opacity: 0;
+      transition: opacity 1s ease;
+    }
+    footer.visible {
+      opacity: 1;
     }
   </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const images = document.querySelectorAll('.fade-in');
+      const footer = document.querySelector('footer');
+      const options = {
+        root: null,
+        threshold: 0.1,
+      };
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, options);
+
+      images.forEach(image => {
+        observer.observe(image);
+      });
+      observer.observe(footer);
+    });
+  </script>
 </head>
 <body class="home-page">
 
@@ -94,33 +136,32 @@
 
 
 <section class="gallery">
-  <img src="assets/images/gallery/1.avif" alt="Gallery image 1.avif" loading="lazy">
-  <img src="assets/images/gallery/2.avif" alt="Gallery image 2.avif" loading="lazy">
-  <img src="assets/images/gallery/3.avif" alt="Gallery image 3.avif" loading="lazy">
-  <img src="assets/images/gallery/4.avif" alt="Gallery image 4.avif" loading="lazy">
-  <img src="assets/images/gallery/5.avif" alt="Gallery image 5.avif" loading="lazy">
-  <img src="assets/images/gallery/6.jpeg" alt="Gallery image 6.jpeg" loading="lazy">
-  <img src="assets/images/gallery/7.avif" alt="Gallery image 7.avif" loading="lazy">
-  <img src="assets/images/gallery/8.jpeg" alt="Gallery image 8.jpeg" loading="lazy">
-  <img src="assets/images/gallery/9.avif" alt="Gallery image 9.avif" loading="lazy">
-  <img src="assets/images/gallery/10.avif" alt="Gallery image 10.avif" loading="lazy">
-  <img src="assets/images/gallery/11.jpeg" alt="Gallery image 11.jpeg" loading="lazy">
-  <img src="assets/images/gallery/12.avif" alt="Gallery image 12.avif" loading="lazy">
-  <img src="assets/images/gallery/13.avif" alt="Gallery image 13.avif" loading="lazy">
-  <img src="assets/images/gallery/14.avif" alt="Gallery image 14.avif" loading="lazy">
-  <img src="assets/images/gallery/15.jpeg" alt="Gallery image 15.jpeg" loading="lazy">
-  <img src="assets/images/gallery/16.avif" alt="Gallery image 16.avif" loading="lazy">
-  <img src="assets/images/gallery/17.avif" alt="Gallery image 17.avif" loading="lazy">
-  <img src="assets/images/gallery/18.avif" alt="Gallery image 18.avif" loading="lazy">
-  <img src="assets/images/gallery/19.avif" alt="Gallery image 19.avif" loading="lazy">
-  <img src="assets/images/gallery/20.jpeg" alt="Gallery image 20.jpeg" loading="lazy">
-  <img src="assets/images/gallery/21.avif" alt="Gallery image 21.avif" loading="lazy">
-  <img src="assets/images/gallery/22.avif" alt="Gallery image 22.avif" loading="lazy">
-  <img src="assets/images/gallery/23.avif" alt="Gallery image 23.avif" loading="lazy">
-  <img src="assets/images/gallery/24.avif" alt="Gallery image 24.avif" loading="lazy">
-  <img src="assets/images/gallery/25.jpeg" alt="Gallery image 25.jpeg" loading="lazy">
+  <img src="assets/images/gallery/1.avif" alt="Gallery image 1.avif" loading="lazy" class="fade-in zoom">
+  <img src="assets/images/gallery/2.avif" alt="Gallery image 2.avif" loading="lazy" class="fade-in zoom">
+  <img src="assets/images/gallery/3.avif" alt="Gallery image 3.avif" loading="lazy" class="fade-in zoom">
+  <img src="assets/images/gallery/4.avif" alt="Gallery image 4.avif" loading="lazy" class="fade-in zoom">
+  <img src="assets/images/gallery/5.avif" alt="Gallery image 5.avif" loading="lazy" class="fade-in zoom">
+  <img src="assets/images/gallery/6.jpeg" alt="Gallery image 6.jpeg" loading="lazy" class="fade-in zoom">
+  <img src="assets/images/gallery/7.avif" alt="Gallery image 7.avif" loading="lazy" class="fade-in zoom">
+  <img src="assets/images/gallery/8.jpeg" alt="Gallery image 8.jpeg" loading="lazy" class="fade-in zoom">
+  <img src="assets/images/gallery/9.avif" alt="Gallery image 9.avif" loading="lazy" class="fade-in zoom">
+  <img src="assets/images/gallery/10.avif" alt="Gallery image 10.avif" loading="lazy" class="fade-in zoom">
+  <img src="assets/images/gallery/11.jpeg" alt="Gallery image 11.jpeg" loading="lazy" class="fade-in zoom">
+  <img src="assets/images/gallery/12.avif" alt="Gallery image 12.avif" loading="lazy" class="fade-in zoom">
+  <img src="assets/images/gallery/13.avif" alt="Gallery image 13.avif" loading="lazy" class="fade-in zoom">
+  <img src="assets/images/gallery/15.jpeg" alt="Gallery image 15.jpeg" loading="lazy" class="fade-in zoom">
+  <img src="assets/images/gallery/16.avif" alt="Gallery image 16.avif" loading="lazy" class="fade-in zoom">
+  <img src="assets/images/gallery/17.avif" alt="Gallery image 17.avif" loading="lazy" class="fade-in zoom">
+  <img src="assets/images/gallery/18.avif" alt="Gallery image 18.avif" loading="lazy" class="fade-in zoom">
+  <img src="assets/images/gallery/19.avif" alt="Gallery image 19.avif" loading="lazy" class="fade-in zoom">
+  <img src="assets/images/gallery/20.jpeg" alt="Gallery image 20.jpeg" loading="lazy" class="fade-in zoom">
+  <img src="assets/images/gallery/21.avif" alt="Gallery image 21.avif" loading="lazy" class="fade-in zoom">
+  <img src="assets/images/gallery/22.avif" alt="Gallery image 22.avif" loading="lazy" class="fade-in zoom">
+  <img src="assets/images/gallery/23.avif" alt="Gallery image 23.avif" loading="lazy" class="fade-in zoom">
+  <img src="assets/images/gallery/24.avif" alt="Gallery image 24.avif" loading="lazy" class="fade-in zoom">
+  <img src="assets/images/gallery/25.jpeg" alt="Gallery image 25.jpeg" loading="lazy" class="fade-in zoom">
 </section>
- 
+
 </main>
 
 <footer>
