@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Greens and Anchors | Coastal Getaway</title>
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/styles.css" />
   <style>
-    html {
-      scroll-behavior: smooth; /* Smooth scrolling globally */
-    }
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -21,7 +18,6 @@
       text-align: center;
       padding: 20px;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      transition: background 0.5s ease;
     }
     nav a {
       color: #333;
@@ -34,36 +30,18 @@
       color: #ff5a5f;
     }
     main {
-      position: relative;
-      padding: 20px;
-      background-color: #f9f9f9;
+      padding: 30px;
       text-align: center;
     }
-    .gallery {
+    h2 {
+      color: #ff5a5f;
+    }
+    footer {
+      background-color: rgba(255,255,255,0.95);
+      text-align: center;
+      padding: 20px;
       margin-top: 30px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 30px;
-    }
-    .gallery img {
-      display: block;
-      width: 100%;
-      height: auto;
-      max-width: 1200px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      opacity: 0;
-      transform: translateY(20px) scale(1);
-      transition: opacity 1s ease, transform 1s ease;
-    }
-    .gallery img.visible {
-      opacity: 1;
-      transform: translateY(0) scale(1.02);
-    }
-    .gallery img.zoom:hover {
-      transform: scale(1.04);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
     }
     .airbnb-cta {
       background-color: #ff5a5f;
@@ -80,43 +58,9 @@
       transform: scale(1.05);
       box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     }
-    footer {
-      background-color: rgba(255,255,255,0.95);
-      text-align: center;
-      padding: 20px;
-      margin-top: 30px;
-      opacity: 0;
-      transition: opacity 1s ease;
-    }
-    footer.visible {
-      opacity: 1;
-    }
   </style>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const images = document.querySelectorAll('.fade-in');
-      const footer = document.querySelector('footer');
-      const options = {
-        root: null,
-        threshold: 0.1,
-      };
-      const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, options);
-
-      images.forEach(image => {
-        observer.observe(image);
-      });
-      observer.observe(footer);
-    });
-  </script>
 </head>
-<body class="home-page">
+<body>
 
 <header>
   <h1>Your Perfect Coastal Getaway</h1>
@@ -124,44 +68,23 @@
     <a href="index.html">Home</a>
     <a href="feedback.html">Testimonials</a>
     <a href="golf.html">Golf</a>
+    <a href="discover-rory.html">Discover Rory</a>
     <a href="contact.html">Contact</a>
   </nav>
 </header>
 
 <main>
-  <section class="intro">
-    <p>Relax, unwind, and discover your seaside home away from home at Greens and Anchors.</p>
-    <a class="airbnb-cta" href="https://www.airbnb.com/l/ftRNnl8B" target="_blank">Book Now on Airbnb</a>
+  <h2>Relax, Unwind, Discover</h2>
+  <p>Welcome to Greens and Anchors — your luxurious coastal retreat, perfect for relaxing holidays and unforgettable golf adventures.</p>
+  <a class="airbnb-cta" href="https://www.airbnb.com/l/ftRNnl8B" target="_blank">Book Now on Airbnb</a>
+
+  <section class="gallery">
+    <img src="assets/images/gallery/1.avif" alt="Stylish living room" loading="lazy">
+    <img src="assets/images/gallery/2.avif" alt="Cozy bedroom" loading="lazy">
+    <img src="assets/images/gallery/3.avif" alt="Seaside walk view" loading="lazy">
+    <img src="assets/images/gallery/4.avif" alt="Modern kitchen" loading="lazy">
+    <!-- More gallery images can be added here -->
   </section>
-
-
-<section class="gallery">
-  <img src="assets/images/gallery/1.avif" alt="Gallery image 1.avif" loading="lazy" class="fade-in zoom">
-  <img src="assets/images/gallery/2.avif" alt="Gallery image 2.avif" loading="lazy" class="fade-in zoom">
-  <img src="assets/images/gallery/3.avif" alt="Gallery image 3.avif" loading="lazy" class="fade-in zoom">
-  <img src="assets/images/gallery/4.avif" alt="Gallery image 4.avif" loading="lazy" class="fade-in zoom">
-  <img src="assets/images/gallery/5.avif" alt="Gallery image 5.avif" loading="lazy" class="fade-in zoom">
-  <img src="assets/images/gallery/6.jpeg" alt="Gallery image 6.jpeg" loading="lazy" class="fade-in zoom">
-  <img src="assets/images/gallery/7.avif" alt="Gallery image 7.avif" loading="lazy" class="fade-in zoom">
-  <img src="assets/images/gallery/8.jpeg" alt="Gallery image 8.jpeg" loading="lazy" class="fade-in zoom">
-  <img src="assets/images/gallery/9.avif" alt="Gallery image 9.avif" loading="lazy" class="fade-in zoom">
-  <img src="assets/images/gallery/10.avif" alt="Gallery image 10.avif" loading="lazy" class="fade-in zoom">
-  <img src="assets/images/gallery/11.jpeg" alt="Gallery image 11.jpeg" loading="lazy" class="fade-in zoom">
-  <img src="assets/images/gallery/12.avif" alt="Gallery image 12.avif" loading="lazy" class="fade-in zoom">
-  <img src="assets/images/gallery/13.avif" alt="Gallery image 13.avif" loading="lazy" class="fade-in zoom">
-  <img src="assets/images/gallery/15.jpeg" alt="Gallery image 15.jpeg" loading="lazy" class="fade-in zoom">
-  <img src="assets/images/gallery/16.avif" alt="Gallery image 16.avif" loading="lazy" class="fade-in zoom">
-  <img src="assets/images/gallery/17.avif" alt="Gallery image 17.avif" loading="lazy" class="fade-in zoom">
-  <img src="assets/images/gallery/18.avif" alt="Gallery image 18.avif" loading="lazy" class="fade-in zoom">
-  <img src="assets/images/gallery/19.avif" alt="Gallery image 19.avif" loading="lazy" class="fade-in zoom">
-  <img src="assets/images/gallery/20.jpeg" alt="Gallery image 20.jpeg" loading="lazy" class="fade-in zoom">
-  <img src="assets/images/gallery/21.avif" alt="Gallery image 21.avif" loading="lazy" class="fade-in zoom">
-  <img src="assets/images/gallery/22.avif" alt="Gallery image 22.avif" loading="lazy" class="fade-in zoom">
-  <img src="assets/images/gallery/23.avif" alt="Gallery image 23.avif" loading="lazy" class="fade-in zoom">
-  <img src="assets/images/gallery/24.avif" alt="Gallery image 24.avif" loading="lazy" class="fade-in zoom">
-  <img src="assets/images/gallery/25.jpeg" alt="Gallery image 25.jpeg" loading="lazy" class="fade-in zoom">
-</section>
-
 </main>
 
 <footer>
