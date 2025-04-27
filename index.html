@@ -5,6 +5,74 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Greens and Anchors | Coastal Getaway</title>
   <link rel="stylesheet" href="assets/css/styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #fff;
+      background: url('assets/images/363fd63f-11a8-4a1d-be8b-774f29f0f317.jpeg') no-repeat center center fixed;
+      background-size: cover;
+    }
+    header {
+      background-color: rgba(0,0,0,0.6);
+      text-align: center;
+      padding: 20px;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+    main {
+      position: relative;
+      padding: 20px;
+      background-color: rgba(0,0,0,0.6);
+      text-align: center;
+      overflow: hidden;
+    }
+    main::before {
+      content: "";
+      background: url('assets/images/logo.jpg') no-repeat center center;
+      background-size: 300px;
+      opacity: 0.04;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 0;
+    }
+    main > * {
+      position: relative;
+      z-index: 1;
+    }
+    .gallery {
+      margin-top: 30px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .airbnb-cta {
+      background-color: #ff5a5f;
+      color: white;
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: 5px;
+      display: inline-block;
+      margin: 10px 0;
+    }
+    footer {
+      background-color: rgba(0,0,0,0.85);
+      text-align: center;
+      padding: 20px;
+      margin-top: 30px;
+    }
+  </style>
 </head>
 <body class="home-page">
 
@@ -31,7 +99,7 @@
     <img src="assets/images/gallery4.jpg" alt="Modern kitchen">
   </section>
 </main>
- 
+
 <footer>
   <a class="airbnb-cta" href="https://www.airbnb.com/l/ftRNnl8B" target="_blank">Book Now on Airbnb</a>
   <p>&copy; 2025 Greens and Anchors</p>
