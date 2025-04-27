@@ -1,41 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="icon" type="image/png" href="assets/images/favicon.png">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Golf Nearby | Greens and Anchors</title>
   <link rel="stylesheet" href="assets/css/styles.css" />
   <style>
-    .golf-background img {
-      width: 100%;
-      height: auto;
-      display: block;
-      margin: 0 auto;
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      background: #f9f9f9;
     }
     header {
-      background-color: rgba(0,0,0,0.6);
+      background-color: rgba(255,255,255,0.95);
       text-align: center;
       padding: 20px;
-    }
-    header h1 {
-      color: white;
-      margin: 0;
-      font-size: 2em;
-    }
-    nav {
-      margin-top: 10px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
     nav a {
-      color: white;
+      color: #333;
       margin: 0 10px;
       text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #ff5a5f;
+    }
+    main {
+      padding: 30px;
+      text-align: center;
+    }
+    table {
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+      border-collapse: collapse;
+      background: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    th, td {
+      padding: 15px;
+      text-align: center;
+      border-bottom: 1px solid #eee;
+    }
+    th {
+      background-color: #ff5a5f;
+      color: white;
+      font-size: 1.1em;
+    }
+    tr:hover {
+      background-color: #f1f1f1;
+    }
+    a.more-info {
+      color: #ff5a5f;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    a.more-info:hover {
+      text-decoration: underline;
     }
     footer {
-      background-color: rgba(0,0,0,0.85);
+      background-color: rgba(255,255,255,0.95);
       text-align: center;
       padding: 20px;
       margin-top: 30px;
+      box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
     }
     .airbnb-cta {
       background-color: #ff5a5f;
@@ -45,11 +79,12 @@
       border-radius: 5px;
       display: inline-block;
       margin: 10px 0;
+      transition: all 0.3s ease;
     }
-    .photo-credit {
-      font-size: 0.8em;
-      color: #ccc;
-      margin-top: 10px;
+    .airbnb-cta:hover {
+      background-color: #e0484c;
+      transform: scale(1.05);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     }
   </style>
 </head>
@@ -65,11 +100,36 @@
   </nav>
 </header>
 
-<main class="golf-background">
-  <img src="assets/images/golf-bg.jpg" alt="Golf Courses Nearby">
-  <div class="photo-credit">Image Credit: Ards and North Down Borough Council</div>
+<main>
+  <h2>Local Golf Courses</h2>
+  <p>Discover some of the finest golf experiences just a short drive away.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Distance (miles)</th>
+        <th>Course Name</th>
+        <th>More Info</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>2.0</td><td>Groomsport Golf Centre</td><td><a class="more-info" href="https://www.facebook.com/gsportgolfcentre/" target="_blank">Website · 028 9147 3586</a></td></tr>
+      <tr><td>3.0</td><td>Royal Belfast Golf Club</td><td><a class="more-info" href="https://royalbelfast.com/" target="_blank">Website · +44 28 9042 8165</a></td></tr>
+      <tr><td>3.5</td><td>Blackwood Golf Centre</td><td><a class="more-info" href="https://www.theblackwoodgc.com/" target="_blank">Website · +44 28 9185 2706</a></td></tr>
+      <tr><td>4.0</td><td>Bangor Golf Club</td><td><a class="more-info" href="https://www.bangorgolfclubni.co.uk/" target="_blank">Website · +44 28 9127 0922</a></td></tr>
+      <tr><td>4.5</td><td>Carnalea Golf Club</td><td><a class="more-info" href="https://carnaleagolfclub.co.uk/" target="_blank">Website · 028 9127 0368</a></td></tr>
+      <tr><td>5.0</td><td>Clandeboye Golf Club</td><td><a class="more-info" href="https://www.cgc-ni.com/" target="_blank">Website · +44 28 9127 1767</a></td></tr>
+      <tr><td>6.0</td><td>Scrabo Golf Club</td><td><a class="more-info" href="https://www.scrabogolfclubni.com/" target="_blank">Website · 028 9181 2355</a></td></tr>
+      <tr><td>7.0</td><td>Holywood Golf Club</td><td><a class="more-info" href="https://holywoodgolfclub.co.uk/" target="_blank">Website · +44 28 9042 3135</a></td></tr>
+      <tr><td>7.5</td><td>Helen's Bay Golf Club</td><td><a class="more-info" href="https://www.helensbaygc.com/" target="_blank">Website · 028 9185 2815</a></td></tr>
+      <tr><td>8.0</td><td>Donaghadee Golf Club</td><td><a class="more-info" href="https://www.donaghadeegolfclub.com/" target="_blank">Website · 028 9188 3624</a></td></tr>
+      <tr><td>12.0</td><td>Kirkistown Castle Golf Club</td><td><a class="more-info" href="https://kcgc.golf/" target="_blank">Website · 028 4277 1233</a></td></tr>
+      <tr><td>18.0</td><td>Ardglass Golf Club</td><td><a class="more-info" href="https://ardglassgolfclub.com/" target="_blank">Website · +44 28 4484 1219</a></td></tr>
+      <tr><td>20.0</td><td>Royal County Down Golf Club</td><td><a class="more-info" href="https://www.royalcountydown.org/" target="_blank">Website · +44 28 4372 3314</a></td></tr>
+    </tbody>
+  </table>
 </main>
- 
+
 <footer>
   <a class="airbnb-cta" href="https://www.airbnb.com/l/ftRNnl8B" target="_blank">Book Now on Airbnb</a>
   <p>&copy; 2025 Greens and Anchors</p>
