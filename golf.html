@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Golf Nearby | Greens and Anchors</title>
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
 <header>
@@ -20,11 +20,31 @@
 
 <main>
   <h2>Local Golf Courses</h2>
-  <p>Discover some of the finest golf experiences just a short drive away.</p>
+  <p class="subheading">Discover some of the finest golf experiences just a short drive away.</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Distance (miles)</th>
+        <th>Course Name</th>
+        <th>More Info</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>2.0</td><td>Groomsport Golf Centre</td><td><a href="#">Website · Phone</a></td></tr>
+      <tr><td>3.0</td><td>Royal Belfast Golf Club</td><td><a href="#">Website · Phone</a></td></tr>
+      <tr><td>7.0</td><td>Holywood Golf Club <button onclick="openModal()">Discover Rory</button></td><td><a href="#">Website · Phone</a></td></tr>
+    </tbody>
+  </table>
 </main>
 
 <footer>
   <p>&copy; 2025 Greens and Anchors</p>
 </footer>
+
+<script>
+function openModal() {
+  window.location.href = "discover-rory.html";
+}
+</script>
 </body>
 </html>
