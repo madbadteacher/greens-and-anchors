@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="assets/css/styles.css">
   <style>
     body {
-      background: #48BFF5;
+      background: #6A9B32;
       margin: 0;
       padding: 0;
       font-family: Arial, sans-serif;
@@ -15,9 +15,9 @@
     header {
       position: sticky;
       top: 0;
-      background: #6A9B32;
+      background: #48BFF5;
       z-index: 1000;
-      padding: 30px 20px; /* Increased padding for better height */
+      padding: 30px 20px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
       text-align: center;
       position: relative;
@@ -28,9 +28,10 @@
     }
     .header-logo {
       position: absolute;
-      top: 15px;
+      top: 50%;
       right: 20px;
       height: 150px;
+      transform: translateY(-50%);
     }
     nav a {
       margin: 0 10px;
@@ -75,7 +76,8 @@
       margin-top: 20px;
     }
     footer {
-      text-align: center;
+      display: flex;
+      justify-content: flex-end;
       padding: 20px;
       background: #222;
       color: white;
