@@ -5,7 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Greens and Anchors | Coastal Getaway</title>
   <link rel="stylesheet" href="assets/css/styles.css" />
+  <style>
+    /* Gallery Styles */
+    .gallery {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      margin-top: 40px;
+      padding-bottom: 40px;
+    }
+    .gallery img {
+      width: 90%;
+      max-width: 1200px;
+      border-radius: 8px;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+    }
+    .gallery img.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
 </head>
+
 <body>
 <header>
   <h1>Your Perfect Coastal Getaway</h1>
@@ -17,44 +41,59 @@
     <a href="contact.html">Contact</a>
   </nav>
 </header>
- 
+
 <main>
   <h2>Relax, Unwind, Discover</h2>
   <p>Welcome to Greens and Anchors — your luxurious coastal retreat, perfect for relaxing holidays and unforgettable golf adventures.</p>
   <a class="airbnb-cta" href="https://www.airbnb.com/l/ftRNnl8B" target="_blank">Book Now on Airbnb</a>
 
   <section class="gallery">
-    <!-- Full real gallery images (1 to 25) -->
-    <img src="assets/images/gallery/1.avif" alt="Gallery image 1" loading="lazy">
-    <img src="assets/images/gallery/2.avif" alt="Gallery image 2" loading="lazy">
-    <img src="assets/images/gallery/3.avif" alt="Gallery image 3" loading="lazy">
-    <img src="assets/images/gallery/4.avif" alt="Gallery image 4" loading="lazy">
-    <img src="assets/images/gallery/5.avif" alt="Gallery image 5" loading="lazy">
-    <img src="assets/images/gallery/6.avif" alt="Gallery image 6" loading="lazy">
-    <img src="assets/images/gallery/7.avif" alt="Gallery image 7" loading="lazy">
-    <img src="assets/images/gallery/8.avif" alt="Gallery image 8" loading="lazy">
-    <img src="assets/images/gallery/9.avif" alt="Gallery image 9" loading="lazy">
-    <img src="assets/images/gallery/10.avif" alt="Gallery image 10" loading="lazy">
-    <img src="assets/images/gallery/11.avif" alt="Gallery image 11" loading="lazy">
-    <img src="assets/images/gallery/12.avif" alt="Gallery image 12" loading="lazy">
-    <img src="assets/images/gallery/13.avif" alt="Gallery image 13" loading="lazy">
-    <img src="assets/images/gallery/14.avif" alt="Gallery image 14" loading="lazy">
-    <img src="assets/images/gallery/15.avif" alt="Gallery image 15" loading="lazy">
-    <img src="assets/images/gallery/16.avif" alt="Gallery image 16" loading="lazy">
-    <img src="assets/images/gallery/17.avif" alt="Gallery image 17" loading="lazy">
-    <img src="assets/images/gallery/18.avif" alt="Gallery image 18" loading="lazy">
-    <img src="assets/images/gallery/19.avif" alt="Gallery image 19" loading="lazy">
-    <img src="assets/images/gallery/20.avif" alt="Gallery image 20" loading="lazy">
-    <img src="assets/images/gallery/21.avif" alt="Gallery image 21" loading="lazy">
-    <img src="assets/images/gallery/22.avif" alt="Gallery image 22" loading="lazy">
-    <img src="assets/images/gallery/23.avif" alt="Gallery image 23" loading="lazy">
-    <img src="assets/images/gallery/24.avif" alt="Gallery image 24" loading="lazy">
-    <img src="assets/images/gallery/25.avif" alt="Gallery image 25" loading="lazy">
+    <img class="fade-in" src="assets/images/gallery/1.avif" alt="Gallery image 1" loading="lazy">
+    <img class="fade-in" src="assets/images/gallery/2.avif" alt="Gallery image 2" loading="lazy">
+    <img class="fade-in" src="assets/images/gallery/3.avif" alt="Gallery image 3" loading="lazy">
+    <img class="fade-in" src="assets/images/gallery/4.avif" alt="Gallery image 4" loading="lazy">
+    <img class="fade-in" src="assets/images/gallery/5.avif" alt="Gallery image 5" loading="lazy">
+    <img class="fade-in" src="assets/images/gallery/6.jpeg" alt="Gallery image 6" loading="lazy">
+    <img class="fade-in" src="assets/images/gallery/7.avif" alt="Gallery image 7" loading="lazy">
+    <img class="fade-in" src="assets/images/gallery/8.jpeg" alt="Gallery image 8" loading="lazy">
+    <img class="fade-in" src="assets/images/gallery/9.avif" alt="Gallery image 9" loading="lazy">
+    <img class="fade-in" src="assets/images/gallery/10.avif" alt="Gallery image 10" loading="lazy">
+    <img class="fade-in" src="assets/images/gallery/11.jpeg" alt="Gallery image 11" loading="lazy">
+    <img class="fade-in" src="assets/images/gallery/12.avif" alt="Gallery image 12" loading="lazy">
+    <img class="fade-in" src="assets/images/gallery/13.avif" alt="Gallery image 13" loading="lazy">
+    <img class="fade-in" src="assets/images/gallery/14.avif" alt="Gallery image 14" loading="lazy">
+    <img class="fade-in" src="assets/images/gallery/15.jpeg" alt="Gallery image 15" loading="lazy">
+    <img class="fade-in" src="assets/images/gallery/16.avif" alt="Gallery image 16" loading="lazy">
+    <img class="fade-in" src="assets/images/gallery/17.avif" alt="Gallery image 17" loading="lazy">
+    <img class="fade-in" src="assets/images/gallery/18.avif" alt="Gallery image 18" loading="lazy">
+    <img class="fade-in" src="assets/images/gallery/19.avif" alt="Gallery image 19" loading="lazy">
+    <img class="fade-in" src="assets/images/gallery/20.jpeg" alt="Gallery image 20" loading="lazy">
+    <img class="fade-in" src="assets/images/gallery/21.avif" alt="Gallery image 21" loading="lazy">
+    <img class="fade-in" src="assets/images/gallery/22.avif" alt="Gallery image 22" loading="lazy">
+    <img class="fade-in" src="assets/images/gallery/23.avif" alt="Gallery image 23" loading="lazy">
+    <img class="fade-in" src="assets/images/gallery/24.avif" alt="Gallery image 24" loading="lazy">
+    <img class="fade-in" src="assets/images/gallery/25.jpeg" alt="Gallery image 25" loading="lazy">
   </section>
 </main>
- 
+
 <footer>
   <p>&copy; 2025 Greens and Anchors</p>
 </footer>
+
+<script>
+// Smooth fade in on scroll
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.gallery img').forEach(img => {
+  observer.observe(img);
+});
+</script>
+
 </body>
 </html>
