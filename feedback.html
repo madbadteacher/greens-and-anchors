@@ -1,27 +1,47 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Guest Feedback | Greens and Anchors</title>
+  <title>Guest Testimonials | Greens and Anchors</title>
   <link rel="stylesheet" href="assets/css/styles.css">
   <style>
+    body {
+      margin: 0;
+      background: #6A9B32;
+      font-family: Arial, sans-serif;
+    }
     header {
-      position: sticky;
-      top: 0;
-      background: white;
-      z-index: 1000;
-      padding: 20px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      background: #48BFF5;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    header h1 {
+      color: white;
+      margin: 0;
+      font-size: 2rem;
+    }
+    nav {
+      margin-top: 10px;
     }
     nav a {
-      margin: 0 10px;
+      color: white;
       text-decoration: none;
       font-weight: bold;
-      color: #2e2e2e;
+      margin: 0 10px;
+      padding: 5px 10px;
+      border-radius: 5px;
     }
     nav a:hover {
       color: #ff5a5f;
+    }
+    nav a.active {
+      background-color: #ff5a5f;
+      color: white;
     }
     .airbnb-cta {
       background-color: #ff5a5f;
@@ -36,30 +56,40 @@
       background-color: #e0484c;
     }
     main {
-      margin: 30px auto;
-      max-width: 900px;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 60px 20px 40px;
       text-align: center;
-      padding: 20px;
+      position: relative;
     }
-    blockquote {
-      font-style: italic;
-      background: #f9f9f9;
+    .logo-green {
+      display: block;
+      margin: 0 auto 40px auto;
+      width: 200px;
+    }
+    h2 {
+      color: white;
+      margin-top: 20px;
+    }
+    .testimonial {
+      color: white;
+      font-size: 1.1rem;
+      margin-top: 20px;
+      line-height: 1.6;
+      background: rgba(255,255,255,0.1);
       padding: 20px;
-      margin: 20px auto;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-      color: #ff5a5f
+      border-radius: 10px;
+      margin-bottom: 20px;
     }
   </style>
 </head>
-
 <body>
 
 <header>
-  <h1>Guest Feedback</h1>
+  <h1>Guest Testimonials</h1>
   <nav>
     <a href="index.html">Home</a>
-    <a href="feedback.html">Testimonials</a>
+    <a href="feedback.html" class="active">Testimonials</a>
     <a href="golf.html">Golf</a>
     <a href="discover-rory.html">Discover Rory</a>
     <a href="contact.html">Contact</a>
@@ -68,29 +98,27 @@
 </header>
 
 <main>
-  <h2>What Our Guests Say</h2>
+  <img src="assets/images/logo.png" alt="Greens and Anchors Logo" class="logo-green">
 
-  <blockquote>"Lovely flat, stylish in its decor, with very comfortable beds. Lots of room in the bedrooms and living areas. We enjoyed our stay and would recommend."</blockquote>
-  <blockquote>"Beautiful apartment with lots of space. Spotlessly clean and tastefully decorated. Would highly recommend Emma's apartment."</blockquote>
-  <blockquote>"Emma is an amazing host. This was our second time staying. Love her place! Highly recommend."</blockquote>
-  <blockquote>"Fantastic apartment. Spotlessly clean, very comfortable, and perfectly located. Emma was brilliant and welcoming."</blockquote>
-  <blockquote>"Emma jumped through hoops to ensure a fantastic stay. Spacious, cozy, and in a great location. 10/10!"</blockquote>
-  <blockquote>"Emma’s place was lovely, very clean and tidy, felt like a home from home. Easily accessible and great location."</blockquote>
-  <blockquote>"Lovely spot and felt like home away from home. Thanks!"</blockquote>
-  <blockquote>"The apartment is immaculate and very spacious. Kitchen had everything needed. A fantastic stay!"</blockquote>
-  <blockquote>"Emma was a fabulous host. Super responsive and welcoming. One of the best stays I’ve had!"</blockquote>
-  <blockquote>"The apartment was spotless and spacious! Great location, very comfortable rooms."</blockquote>
-  <blockquote>"Emma was very communicative, flexible and friendly! Would definitely recommend!"</blockquote>
-  <blockquote>"Emma’s place is fantastic — clean, warm, stylish and exactly as pictured. Highly responsive host."</blockquote>
-  <blockquote>"Wonderful four-night stay! Beautifully decorated, private, and a perfect location close to harbour."</blockquote>
-  <blockquote>"I had a fantastic stay. The apartment was spotless and Emma was a wonderful host. Highly recommend!"</blockquote>
-  <blockquote>"Second stay and just as wonderful as the first. Immaculate, spacious and cozy. Wouldn’t stay anywhere else!"</blockquote>
+  <h2>What Our Guests Are Saying</h2>
+
+  <div class="testimonial">
+    "Lovely flat, stylish in its decor, with very comfortable beds. Lots of room in the bedrooms and living areas. We enjoyed our stay and would recommend."
+  </div>
+  <div class="testimonial">
+    "Beautiful apartment with lots of space. Spotlessly clean and tastefully decorated. Some added extras also left for our dog. Would highly recommend."
+  </div>
+  <div class="testimonial">
+    "Fantastic apartment. Everything was as described, spotlessly clean and very comfortable. Very short walk into Bangor so perfectly located."
+  </div>
+  <div class="testimonial">
+    "Emma jumped through hoops to make sure me, my wife, and daughter had a great stay. Fantastic location, bigger than expected. Highly recommended!"
+  </div>
+  <div class="testimonial">
+    "Emma’s place was lovely, very clean and tidy, felt like a home from home. Easily accessible and in a good location with a short drive or walk into Bangor."
+  </div>
 
 </main>
-
-<footer>
-  <p>&copy; 2025 Greens and Anchors</p>
-</footer>
 
 </body>
 </html>
