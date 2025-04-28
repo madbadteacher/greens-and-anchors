@@ -2,44 +2,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Discover Rory McIlroy</title>
   <link rel="stylesheet" href="assets/css/styles.css">
+  <style>
+    body {
+      margin: 0;
+      background: #6A9B32;
+      font-family: Arial, sans-serif;
+    }
+    header {
+      background: #48BFF5;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    header h1 {
+      color: white;
+      margin: 0;
+      font-size: 2rem;
+    }
+    nav {
+      margin-top: 10px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 0 10px;
+    }
+    nav a:hover {
+      color: #ff5a5f;
+    }
+    .airbnb-cta {
+      background-color: #ff5a5f;
+      color: white;
+      padding: 6px 12px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-left: 10px;
+    }
+    .airbnb-cta:hover {
+      background-color: #e0484c;
+    }
+    main {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 60px 20px 20px;
+      text-align: left;
+      position: relative;
+    }
+    .logo-green {
+      display: block;
+      margin: 0 auto 40px auto;
+      width: 200px;
+    }
+    h2 {
+      color: white;
+      margin-top: 20px;
+    }
+    p {
+      color: white;
+      font-size: 1.2rem;
+      margin-top: 20px;
+      line-height: 1.6;
+    }
+    footer {
+      text-align: right;
+      padding: 10px 20px;
+      color: white;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 <body>
-  <header class="hero-small">
-    <div class="navbar">
-      <div class="nav-left">
-        <h1 class="site-title">Discover Rory McIlroy</h1>
-      </div>
-      <nav class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="testimonials.html">Testimonials</a>
-        <a href="golf.html">Golf</a>
-        <a href="discover-rory.html" class="active">Discover Rory</a>
-        <a href="contact.html">Contact</a>
-        <a href="https://www.airbnb.com/l/ftRNnl8B" class="btn">Book Now</a>
-      </nav>
-    </div>
-  </header>
-  <section class="rory-hero">
-    <img src="assets/images/logo.png" alt="Greens and Anchors Logo" style="display: block; margin: 0 auto; width: 160px; margin-top: 20px;">
-  </section>
-  <section class="content">
-    <h2>From Holywood to the World</h2>
-    <p>
-      Hollywood Golf Club in Northern Ireland isn't just any golf course — it's the birthplace of one of golf’s greatest champions. Rory McIlroy began playing here as a young boy, nurturing his talent among the scenic fairways and rolling hills.
-    </p>
-    <p>
-      Rory went on to achieve global fame, becoming one of the few players to win four Major Championships: the U.S. Open, The Open Championship, and two PGA Championships. In 2025, he cemented his legacy by finally capturing the Masters title at Augusta, completing a historic career Grand Slam.
-    </p>
-    <p>
-      Visitors to Holywood can experience the same greens that honed Rory’s legendary skill, offering a rare chance to walk in the footsteps of greatness.
-    </p>
-  </section>
-  <footer class="footer">
-    <p>© 2025 Greens and Anchors</p>
-  </footer>
+
+<header>
+  <h1>Discover Rory McIlroy</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="feedback.html">Testimonials</a>
+    <a href="golf.html">Golf</a>
+    <a href="discover-rory.html" class="active">Discover Rory</a>
+    <a href="contact.html">Contact</a>
+    <a class="airbnb-cta" href="https://www.airbnb.com/l/ftRNnl8B" target="_blank">Book Now</a>
+  </nav>
+</header>
+
+<main>
+  <img src="assets/images/logo.png" alt="Greens and Anchors Logo" class="logo-green">
+
+  <h2>From Holywood to the World</h2>
+
+  <p>
+    Holywood Golf Club in Northern Ireland isn't just any golf course — it's the birthplace of one of golf’s greatest champions.
+    Rory McIlroy began playing here as a young boy, nurturing his talent among the scenic fairways and rolling hills.
+  </p>
+
+  <p>
+    Rory went on to achieve global fame, becoming one of the few players to win four Major Championships: the U.S. Open, The Open Championship, and two PGA Championships.
+    In 2025, he cemented his legacy by finally capturing the Masters title at Augusta, completing a historic career Grand Slam.
+  </p>
+
+  <p>
+    Visitors to Holywood can experience the same greens that honed Rory’s legendary skill, offering a rare chance to walk in the footsteps of greatness.
+  </p>
+</main>
+
+<footer>
+  <p>&copy; 2025 Greens and Anchors</p>
+</footer>
+
 </body>
 </html>
